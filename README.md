@@ -1,99 +1,214 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
+    <img src="./docs/ghost-readme-banner.jpg" alt="Ghost Gatsby Theme" width="800"/>
 </p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+<p align="center">
+  <a href="https://github.com/akanshgulati/gatsby-theme-ghost/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="gatsby-theme-ghost is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.org/package/gatsby-theme-ghost">
+    <img src="https://img.shields.io/npm/v/gatsby-theme-ghost.svg" alt="Current npm package version." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://twitter.com/intent/follow?screen_name=akanshgulati">
+    <img src="https://img.shields.io/twitter/follow/akanshgulati.svg?label=Follow%20@akanshgulati" alt="Follow @akanshgulati" />
+  </a>
+  <a href="https://app.netlify.com/sites/gatsby-theme-ghost/deploys">
+      <img src="https://api.netlify.com/api/v1/badges/ae8e28d2-398b-4fcd-87c5-20ff1c74d077/deploy-status" alt="Netlify Status" />
+    </a>
+</p>
+<hr/>
+<p align="center">
+Minimalistic Gatsby theme, mobile and SEO friendly and supports author, tag and static pages
+</p>
+<p align="center">
+    <img src="./docs/chrome-mockup.jpg" alt="Ghost Chrome mockup" width="800"/>
+</p>
+<a href="https://gatsby-theme-ghost.netlify.com/" target="_blank">
+<img src="./docs/live-preview.svg" alt="Live Preview" width="160px" height="40px">
+</a>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## 📦 Installation 
 
-## 🚀 Quick start
+#### Gatsby
 
-1.  **Create a Gatsby site.**
+```shell script
+gatsby new gatsby-blog akanshgulati/gatsby-theme-ghost
+```
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+<small>
+This will generate a new site (with the folder name "gatsby-blog") that pre-configures use of the theme including example content.
+</small>
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+<br>
 
-1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+## 💥 Features  
+ 
+- **Code Snippet Support** - Integration with [remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/) for beautifying code snippets on posts  
+- **100% performance optimisation** -  It has **98+** for both mobile and desktop as per Google lighthouse benchmarks  
+   - **Responsive** lazy loading of images for desktop and mobile  
+   - **Preloading** of important resource to improve **Critical Rendering Path** of page load  
+   - Retina-rich images for **iOS devices** to prevent any blur images.   
+   - **Async** loading of non-essential scripts like Google Analytics, etc.  
+- **RSS Generator** - Creates RSS for posts to be easily accessible by any RSS reader  
+- **SEO Friendly** - SEO score of the posts and entire website is **98+**  
+  - **Sitemap** - Generates sitemap for the posts, author page, tag page and static pages.  
+   - **Structured data** - Contains [JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) format information about the content  
+   - **Alt info** - All the images itself has alt attribute as per title of the image.  
+   - **Title info** - Links has title attributes for better understanding of link  
+- **Social Ready** - All essential `meta-tags` added for sharing posts and website over Facebook, Twitter, Instagram, etc. websites  
+- **Analytics** - Integration of Google Analytics for analyses purposes.  
+- **Mobile Friendly** - Posts and rest of the pages are mobile friendly to be easily readable.  
+- **Accessibility** - Scores **98+** for the posts and home page.  
+- **Deploy Ready** - Contains configuration `netlify.toml` for deploying on Netlify directly.  
+- **Customisations** - Easy to customise home page, posts and other elements of website.  
+- **Comment System** - Integration of the [Disqus](https://github.com/disqus/disqus-react) commenting system  
+     
+<br/>
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+## 👨‍💻 Development
 
-1.  **Open the source code and start editing!**
+```shell script
+yarn dev
+```
+- Runs local website with hot reloading by default at `8000` port
+- Runs GraphQL for debugging at `localhost:8000/__graphql` path
 
-    Your site is now running at `http://localhost:8000`!
+<br/>
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## ⚙️ Configuration 
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Change the website configuration at `utils/siteConfig.js` file.  
+   1. Add `Disqus` [short name](https://help.disqus.com/en/articles/1717111-what-s-a-shortname) for enabling comments on posts  
+   2. Update the `navigation` links shown in header of website  
+   3. Update username of the Twitter and Facebook for icons shown in header of website  
 
-## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```JS
+module.exports = {  
+  siteUrl: `https://gatsby-theme-ghost.netlify.com`, // Site domain. Do not include a trailing slash!  
+  
+  postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)  
+  
+  siteTitleMeta: `Gatsby Theme Ghost`, // This allows an alternative site title for meta data for pages.  
+  siteDescriptionMeta: `Minimalistic Gatsby theme for blogs`, // This allows an alternative site description for meta data for pages.  
+  siteTwitterHandle: `@akanshgulati`,  
+  siteFacebookHandle: `akanshgulati`,  
+  language: `en`
+  // ...
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+<br/>
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+## 📝 Adding Content
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+### New Post  
+1. Create a directory for every post under `src/posts` directory, having a markdown file (.md extension)   
+2. Add following meta information:  
+   - `title`<sup>*</sup>: The title of the post  
+   - `date`<sup>*</sup>: The creation date of the markdown file  
+   - `slug`<sup>*</sup>: Url of the post  
+   - `draft`<sup>*</sup>: Accepts `true/false` as value for visibility of the post  
+   - `tags`<sup>*</sup>: Add `tag_id` of different tags in `yaml` format  
+   - `author`<sup>*</sup>: Add `author_id` of author  
+   - `comment`<sup>*</sup>: To show comment on the page bottom  
+   - `feature_image`<sup>*</sup>: The URL of the image shown at the top of the article  
+   - `created_at`<sup>*</sup>: Date of the creation of the post (same as date above)  
+   - `published_at`<sup>*</sup>: The date of the publishing of the post  
+   - `updated_at`<sup>*</sup>: The date of the updating of the post  
+   - 3. Add all images and other media content in the same directory as markdown file.  
+  
+**Note:** Create all tags and authors markdown files before adding it in post.  
+  
+### New Tag  
+1. Create a markdown file by the new tag name under `src/tags` directory.   
+2. Add following meta information:  
+   - `tag_id`<sup>*</sup>: The id which is mapped with post's tags  
+   - `name`<sup>*</sup>: Name as shown on posts if added  
+   - `slug`<sup>*</sup>: Url of the tag page  
+   - `description`: Description shown on the tag pages before the list of posts  
+  
+### New Author  
+1. Create a markdown file by the new tag name under `src/authors` directory.   
+2. Add following meta information:  
+   - `author_id`<sup>*</sup>: The id which is mapped with post's author name  
+   - `name`<sup>*</sup>: Name as shown on posts if added  
+   - `slug`<sup>*</sup>: Url of the author page  
+   - `profile_image`<sup>*</sup>: Url of the author image for each post on home page and author page.  
+   - `description`: Description shown on the author pages before the list of posts  
+   - `twitter`: Username of the Twitter for author page  
+   - `facebook`: Username of the Facebook for author page  
+   - `website`: URL of the personal website of the author  
+  
+### New Page  
+1. Create a markdown file by the new tag name under `src/pages` directory.   
+2. Add following meta information:   
+   - `title`<sup>*</sup>: The title shown at the top of the page  
+   - `date`<sup>*</sup>: Date of creation of the page  
+   - `draft`<sup>*</sup>: Decides if the page is to be shown to public, can have true/false value  
+   - `slug`<sup>*</sup>: URL of the page  
+   - `created_at`<sup>*</sup>: Date of the creation of the page (same as date above)  
+   - `published_at`<sup>*</sup>: The date of the publishing of the page  
+   - `updated_at`<sup>*</sup>: The date of the updating of the page  
+3. Add body content of the page after the meta information  
+  
+  
+  
+**<sup>*</sup>Required**  
+  
+  
+<br/>
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+  
+## 🔭 Directory Structure 
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+```
+.    
+├── plugins    
+│   └── gatsby-plugin-ghost-manifest    
+├── public    
+├── src  
+│   ├── authors  
+│   │   ├── akansh.md  
+│   ├── pages    
+│   │   └── about    
+│   ├── posts    
+│   │   ├── best-practises-to-select-cdn  
+│   │   ├── ...    
+│   │   └── ...   
+│   ├── tags  
+│   │   ├── javascript.md  
+│   ├── components    
+│   │   └── common    
+│   │       └── meta  
+│   ├── styles   
+│   ├── templates    
+│   └── utils    
+│       └── rss    
+└── static    
+    
+```    
+- **plugins**: Contains custom plugins created for Gatsby    
+- **public**: Contains build files accessible over web    
+- **src**: Contains React components as well as content of blog as followed  
+   - **authors**: Has markdown files for each author specifying social links, image, name, etc.  
+   - **pages**: Has directory for each static page in markdown format  
+   - **posts**: Has directory for each blog post having images and markdown format post content  
+   - **tags**: Has file for each tag having description, slug, featured image, etc. information  
+   - **components**: Has React components for different sections of the website  
+   - **styles**: Has CSS(stylesheet) file for the blog  
+   - **templates**: Has template in React for post, static page, author page and tag page.  
+   - **utils**: Has RSS generator script and **site configuration**.  
+- **static**: All the content is copied directly in the public folder on build, stores website favicon, robots.txt file and other files required at root of publicly accessible directory.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+<br>
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+## ☑️ Todo
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+ - [ ] Previous and Next post widget
+ - [ ] Add subscription widget
+ - [ ] Netlify CMS integration
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+## 💪 Maintainer
+[Akansh Gulati](https://akansh.com)
