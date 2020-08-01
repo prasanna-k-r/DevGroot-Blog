@@ -31,7 +31,7 @@ module.exports = {
         },
     ],
 
-    googleAnalyticsId: "G-RCYH0CR0VX", // ADD_COMPLETE_TRACKING_ID => UA-151385213-1
+    googleAnalyticsId: "UA-174220330-1", // ADD_COMPLETE_TRACKING_ID => UA-151385213-1
 
     disqusShortname: "devgroot" // ADD_SHORT_NAME => https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 }
