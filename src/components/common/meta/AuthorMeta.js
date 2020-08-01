@@ -53,6 +53,7 @@ const AuthorMeta = ({ data, settings, canonical }) => {
                         "description": "${description}"
                     }
                 `}</script>
+                <script data-ad-client="ca-pub-6308456283421785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Helmet>
             <ImageMeta image={shareImage} />
         </>

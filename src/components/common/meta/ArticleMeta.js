@@ -116,6 +116,7 @@ const ArticleMetaGhost = ({ data, settings, canonical, id }) => {
                 <script type="application/javascript">
                     {`console.log("Called"); window.pageId="${articleId}"`}
                 </script>
+                <script data-ad-client="ca-pub-6308456283421785" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Helmet>
             <ImageMeta image={shareImage} />
         </>
