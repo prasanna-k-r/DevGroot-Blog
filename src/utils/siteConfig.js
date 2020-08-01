@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: `https://devgroot.netlify.app/`, // Site domain. Do not include a trailing slash!
+    siteUrl: `https://devgroot.tech/`, // Site domain. Do not include a trailing slash!
 
     postsPerPage: 6, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
