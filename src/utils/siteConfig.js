@@ -3,6 +3,7 @@ module.exports = {
 
     postsPerPage: 6, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
+    title: `DevGroot`,
     siteTitleMeta: `DevGroot`, // This allows an alternative site title for meta data for pages.
     siteDescriptionMeta: `DevGroot blog`, // This allows an alternative site description for meta data for pages.
     siteTwitterHandle: `@prasannakr1998`,
