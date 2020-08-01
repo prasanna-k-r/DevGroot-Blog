@@ -13,7 +13,7 @@ tags:
     - learning
 slug: 'welcoming-to-first-article3'
 author: 'prasanna'
-comment: false
+comment: true
 meta_description: ''
 id: 'first-article'
 ---
