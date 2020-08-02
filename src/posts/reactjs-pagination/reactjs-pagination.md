@@ -10,11 +10,11 @@ created_at: 2020-08-01T00:00:00+5:30
 weight: 2
 page: false
 tags: 
-    - learning
+    - reactjs
 slug: 'pagination-in-reactjs'
 author: 'prasanna'
 comment: true
-meta_description: ''
+meta_description: 'Pagination in ReactJS Using react-js-pagination.'
 id: 'devgroot-1'
 ---
 
