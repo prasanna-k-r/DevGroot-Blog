@@ -49,6 +49,8 @@ we need to install three package ***Axios*** for Rest API, ***react-js-paginatio
 
 we need to import bootstrap in index.js
 
+> ./index.js
+
 ```javascript
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
@@ -168,6 +170,8 @@ Here the live example and git repository.
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
 </iframe>
+
+
 
 Git Repository:
 
