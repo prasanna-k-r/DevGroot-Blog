@@ -9,7 +9,7 @@ slug: 'about'
 ---
 **I'm a web and mobile developer with 3 years background.**
 
-For front end I use Angular js, Angular, Ionic, React.js,Nodejs as a main frameworks. I create testing utilities to make sure the code performs well on different site and at scale.
+For front end I use Angular js, Angular, Ionic, React.js,Nodejs as a main frameworks. 
 
 My other skills:
 
