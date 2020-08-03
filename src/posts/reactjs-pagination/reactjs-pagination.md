@@ -2,10 +2,10 @@
 title: 'Pagination in ReactJs'
 date: 2020-08-01T00:00:00+5:30
 draft: false
-feature_image: network-world.png
+feature_image: reactjs.png
 featured: false
 published_at: 2020-08-01T00:00:00+5:30
-updated_at: 2020-08-01T00:00:00+5:30
+updated_at: 2020-08-03T00:00:00+5:30
 created_at: 2020-08-01T00:00:00+5:30
 weight: 2
 page: false
@@ -27,29 +27,29 @@ Here we are paginate our reactjs application using react-js-pagination
 ### 1.Create a New React App
 
 first we need to create an Reactjs application using below command
-> npx create-react-app reactjs-pagination
+> ###### _npx create-react-app reactjs-pagination_
 
 move to created folder and run the created app using npm start. Check the running app on http://localhost:3000 on your browser.
 
-> cd reactjs-pagination
+> ###### _cd reactjs-pagination_
 >
-> npm start
+> ###### _npm start_
 
 ### 2. Install Package
 
 we need to install three package ***Axios*** for Rest API, ***react-js-pagination*** for Pagination and ***bootstrap*** for style
 
-> npm i axios
+> ###### _npm i axios_
 >
-> npm i react-js-pagination
+> ###### _npm i react-js-pagination_
 >
-> npm i bootstrap@4
+> ###### _npm i bootstrap@4_
 
 ### 3. Import Bootstrap 
 
 we need to import bootstrap in index.js
 
-> ./index.js
+> ###### _./index.js_
 
 ```javascript
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -59,15 +59,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 Create your own component.
 
-> src/pagination/index.js
+> ###### _src/pagination/index.js_
 >
-> src/pagination/PaginationComponent.js
+> ###### _src/pagination/PaginationComponent.js_
 
 ### 5. Fetch Data Using Axios.
 
 Create a function and fetch data using axios. Here i am using dummy data from  https://reqres.in/
 
-> src/pagination/index.js
+> ###### _src/pagination/index.js_
 
 ```javascript
 loadData = (page) =>{
@@ -88,7 +88,7 @@ loadData = (page) =>{
 
 ### 6. Pass pagination properties to pagination Component.
 
-> src/pagination/index.js
+> ###### _src/pagination/index.js_
 
 Pass the pagination properties to the pagination component.
 
@@ -105,7 +105,7 @@ We need to create the pagination Component.
 
 Create a pagination component and pass the data in props.
 
-> src/pagination/PaginationComponent.js
+> ###### _src/pagination/PaginationComponent.js_
 
 ```javascript
 <div className="pagination-wrapper" style={{marginLeft:"50%"}}>
@@ -128,7 +128,7 @@ Create a pagination component and pass the data in props.
 
 Now we need to create a function to handle onChange event. And pass the next page event in Props.
 
-> src/pagination/PaginationComponent.js
+> ###### _src/pagination/PaginationComponent.js_
 
 ```javascript
 //Handle Page Change
@@ -144,7 +144,7 @@ handlePageChange= (page)=> {
 
 Handle the pagination event in the index.js and fetch the next page data.
 
-> src/pagination/index.js
+> ###### _src/pagination/index.js_
 
 ```javascript
 getPaginatedData = page =>{
